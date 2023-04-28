@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/src/auth/components/custom_text_field.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 horizontal: 32,
                 vertical: 40
               ),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(45)
@@ -33,15 +34,15 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               child: Column(
                 children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                        isDense: true,
-                        border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(18)
-                      )
-                    ),
+                  CustomTextField(
+                    icon: Icons.email,
+                    label: 'E-mail',
                   ),
-                  TextFormField()
+                  CustomTextField(
+                    icon: Icons.lock,
+                    label: 'Senha',
+                    isObscure: true,
+                  )
                 ],
               ),
             ),
