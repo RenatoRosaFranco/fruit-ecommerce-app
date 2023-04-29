@@ -22,26 +22,46 @@ class _SignInScreenState extends State<SignInScreen> {
           ),
           Expanded(
             child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 40
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
               decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(45)
-                ),
+                borderRadius: BorderRadius.vertical(top: Radius.circular(45)),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  CustomTextField(
+                  const CustomTextField(
                     icon: Icons.email,
                     label: 'E-mail',
                   ),
-                  CustomTextField(
+                  const CustomTextField(
                     icon: Icons.lock,
                     label: 'Senha',
                     isSecret: true,
+                  ),
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18))),
+                      child: const Text(
+                        'Entrar',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Esqueceu a senha?',
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        )),
                   )
                 ],
               ),
