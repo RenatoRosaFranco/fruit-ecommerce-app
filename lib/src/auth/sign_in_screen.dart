@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/auth/components/custom_text_field.dart';
 import 'package:untitled4/src/auth/sign_up_screen.dart';
+import 'package:untitled4/src/base/base_screen.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -99,7 +100,13 @@ class _SignInScreenState extends State<SignInScreen> {
                     SizedBox(
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context){
+                              return const BaseScreen();
+                            })
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18))),
