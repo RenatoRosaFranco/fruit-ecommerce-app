@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/auth/components/custom_text_field.dart';
+import 'package:untitled4/src/auth/sign_up_screen.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -149,7 +150,13 @@ class _SignInScreenState extends State<SignInScreen> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18)),
                             side: const BorderSide(width: 2, color: Colors.green)),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return SignUpScreen();
+                            })
+                          );
+                        },
                         child: const Text(
                           'Criar Conta',
                           style: TextStyle(fontSize: 18),
