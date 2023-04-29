@@ -1,3 +1,5 @@
+// frozen_string_literal: true
+
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/pages/home/home_tab.dart';
 

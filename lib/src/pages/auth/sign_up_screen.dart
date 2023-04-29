@@ -1,3 +1,5 @@
+// frozen_string_literal: true
+
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:untitled4/src/config/custom_colors.dart';

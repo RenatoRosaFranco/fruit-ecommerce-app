@@ -1,3 +1,5 @@
+// frozen_string_literal: true
+
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
 import 'package:untitled4/src/models/item_model.dart';

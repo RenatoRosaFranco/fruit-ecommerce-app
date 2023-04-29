@@ -1,3 +1,5 @@
+// frozen_string_literal: true
+
 class ItemModel {
   String itemName;
   String imageUrl;
