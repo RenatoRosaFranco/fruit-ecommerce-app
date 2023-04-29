@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
-import 'package:untitled4/src/home/components/category_tile.dart';
+import 'package:untitled4/src/pages/home/components/category_tile.dart';
 
 class HomeTab extends StatefulWidget {
   HomeTab({Key? key}) : super(key: key);

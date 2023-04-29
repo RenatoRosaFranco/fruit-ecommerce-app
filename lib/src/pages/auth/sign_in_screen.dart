@@ -1,9 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled4/src/auth/components/custom_text_field.dart';
-import 'package:untitled4/src/auth/sign_up_screen.dart';
-import 'package:untitled4/src/base/base_screen.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
+import 'package:untitled4/src/pages/auth/components/custom_text_field.dart';
+import 'package:untitled4/src/pages/auth/sign_up_screen.dart';
+import 'package:untitled4/src/pages/base/base_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
