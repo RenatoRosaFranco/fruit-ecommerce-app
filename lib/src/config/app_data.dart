@@ -1,6 +1,7 @@
 // frozen_string_literal: true
 
 import 'package:untitled4/src/models/item_model.dart';
+import 'package:untitled4/src/models/user_model.dart';
 
 ItemModel apple = ItemModel(
   description:
@@ -73,3 +74,12 @@ List<String> categories = [
   'Temperos',
   'Cereais'
 ];
+
+UserModel user = UserModel(
+  name: 'Renato Rosa Franco',
+  phone: '(55)99627-6161',
+  email: 'renato_ny@live.com',
+  password: 'test123',
+  cpf: '431.218.638-35'
+);
+

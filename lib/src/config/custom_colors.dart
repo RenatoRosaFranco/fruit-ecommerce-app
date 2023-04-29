@@ -1,3 +1,5 @@
+// frozen_string_literal: true
+
 import 'package:flutter/material.dart';
 
 Map<int, Color> _swatchOpacity = {
