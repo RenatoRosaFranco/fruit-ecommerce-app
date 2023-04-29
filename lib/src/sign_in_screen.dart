@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/auth/components/custom_text_field.dart';
+import 'package:untitled4/src/config/custom_colors.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -13,20 +14,20 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: CustomColors.customSwatchColor,
       body: Column(
         children: [
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text.rich(
+                Text.rich(
                   TextSpan(
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 40,
                       ),
                       children: [
-                        TextSpan(
+                        const TextSpan(
                           text: 'Green',
                           style: TextStyle(
                             color: Colors.white,
@@ -36,7 +37,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         TextSpan(
                           text: 'grocer',
                           style: TextStyle(
-                            color: Colors.red,
+                            color: CustomColors.customContrastColor,
                           ),
                         )
                       ],
@@ -104,10 +105,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         'Esqueceu a senha?',
                         style: TextStyle(
-                          color: Colors.red,
+                          color: CustomColors.customContrastColor,
                         ),
                       )),
                 ),
