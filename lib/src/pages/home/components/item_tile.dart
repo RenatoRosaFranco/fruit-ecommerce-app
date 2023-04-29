@@ -14,7 +14,6 @@ class ItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-
         // Conteudo
         GestureDetector(
           onTap: () {
@@ -33,7 +32,10 @@ class ItemTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // Image
-                  Expanded(child: Image.asset(item.imageUrl)),
+                  Expanded(
+                      child: Hero(
+                          tag: item.imageUrl,
+                          child: Image.asset(item.imageUrl))),
 
                   // Name
                   Text(
