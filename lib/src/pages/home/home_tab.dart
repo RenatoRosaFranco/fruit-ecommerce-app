@@ -89,28 +89,28 @@ class _HomeTabState extends State<HomeTab> {
                     isSelected: appData.categories[index] == selectedCategory,
                   );
                 },
-                separatorBuilder: (_, index) {
-                  return const SizedBox(
-                    width: 10,
-                  );
-                },
+                separatorBuilder: (_, index) => const SizedBox(width: 10),
                 itemCount: appData.categories.length),
           ),
+
           // Grid
           Expanded(
-            child: GridView.builder(
-               padding:  const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                physics: const BouncingScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 9 / 11.5,
-                ),
-                itemCount: appData.items.length,
-                itemBuilder: (_, index) {
-                  return ItemTile(item: appData.items[index]);
-                }),
+            child: Padding(
+              padding: EdgeInsets.only(top: 5),
+              child: GridView.builder(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  physics: const ScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 9 / 11.5,
+                  ),
+                  itemCount: appData.items.length,
+                  itemBuilder: (_, index) {
+                    return ItemTile(item: appData.items[index]);
+                  }),
+            ),
           )
         ],
       ),
