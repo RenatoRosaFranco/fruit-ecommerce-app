@@ -1,5 +1,6 @@
 // frozen_string_literal: true
 
+import 'package:untitled4/src/models/cart_item_model.dart';
 import 'package:untitled4/src/models/item_model.dart';
 import 'package:untitled4/src/models/user_model.dart';
 
@@ -83,3 +84,8 @@ UserModel user = UserModel(
   cpf: '431.218.638-35'
 );
 
+List<CartItemModel> cartItems = [
+  CartItemModel(item: apple, quantity: 2),
+  CartItemModel(item: mango, quantity: 1),
+  CartItemModel(item: guava, quantity: 3)
+];

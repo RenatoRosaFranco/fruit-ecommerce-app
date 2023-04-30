@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
 import 'package:untitled4/src/services/utils_services.dart';
+import 'package:untitled4/src/config/app_data.dart' as app_data;
 
 class CartTab extends StatefulWidget {
   const CartTab({Key? key}) : super(key: key);
@@ -19,11 +20,18 @@ class _CartTabState extends State<CartTab> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('Carrinho'),
+        title: const Text('Carrinho'),
       ),
       body: Column(
         children: [
-          Expanded(child: Placeholder()),
+          Expanded(
+            child: ListView.builder(
+              itemCount: app_data.cartItems.length,
+              itemBuilder: (_, index) {
+                return Text(app_data.cartItems[index].item.itemName);
+              },
+            ),
+          ),
           const SizedBox(height: 20),
           Container(
               padding: const EdgeInsets.all(16),
@@ -52,7 +60,7 @@ class _CartTabState extends State<CartTab> {
                     height: 50,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: CustomColors.customSwatchColor,
+                            backgroundColor: CustomColors.customSwatchColor,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18))),
                         onPressed: () {},
