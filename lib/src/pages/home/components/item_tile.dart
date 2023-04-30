@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled4/src/config/custom_colors.dart';
 import 'package:untitled4/src/models/item_model.dart';
-import 'package:untitled4/src/product/product_screen.dart';
+import 'package:untitled4/src/pages/product/product_screen.dart';
 import 'package:untitled4/src/services/utils_services.dart';
 
 class ItemTile extends StatelessWidget {
