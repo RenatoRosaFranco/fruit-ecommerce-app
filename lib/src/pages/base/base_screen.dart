@@ -1,6 +1,7 @@
 // frozen_string_literal: true
 
 import 'package:flutter/material.dart';
+import 'package:untitled4/src/pages/cart/cart_tab.dart';
 import 'package:untitled4/src/pages/home/home_tab.dart';
 import 'package:untitled4/src/pages/profile/profile_tab.dart';
 
@@ -24,7 +25,7 @@ class _BaseScreenState extends State<BaseScreen> {
           controller: pageController,
           children: [
             const HomeTab(),
-            Container(color: Colors.yellow),
+            const CartTab(),
             Container(color: Colors.blue),
             const ProfileTab()
           ],
