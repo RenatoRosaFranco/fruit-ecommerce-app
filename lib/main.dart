@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled4/src/pages/auth/sign_in_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

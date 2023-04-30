@@ -23,11 +23,11 @@ class _BaseScreenState extends State<BaseScreen> {
         body: PageView(
           physics: const NeverScrollableScrollPhysics(),
           controller: pageController,
-          children: [
-            const HomeTab(),
-            const CartTab(),
-            Container(color: Colors.blue),
-            const ProfileTab()
+          children: const [
+            HomeTab(),
+            CartTab(),
+            CartTab(),
+            ProfileTab()
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -37,8 +37,6 @@ class _BaseScreenState extends State<BaseScreen> {
           unselectedItemColor: Colors.white.withAlpha(100),
           currentIndex: currentIndex,
           onTap: (index) {
-            print(index);
-
             setState(() {
               currentIndex = index;
               pageController.jumpToPage(index);
